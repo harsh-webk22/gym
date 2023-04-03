@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-  <title>Document</title>
+  <title>Update customers</title>
 
 </head>
 
@@ -85,7 +84,7 @@
                 <label>
                   <h2>Payment Date </h2>
                 </label>
-                <input type="date"  name="join" placeholder="Enter your Joining date " required>
+                <input type="date"  name="payment" placeholder="Enter your Joining date " required>
               </div>
 
               <div class="input-field">
@@ -125,18 +124,21 @@
     console.log(data)
 
     var sendData = async ()=>{
-      var res = await fetch("/updateUser", {
+      try{
+        var res = await fetch("/updateUser", {
         method:"POST",
         mode : "cors",
         headers:{
             "Content-type":"application/json"
         },
-        body: JSON.stringify(data)
-      })
+          body: JSON.stringify(data)
+        })
       alert("Data saved succcessfully")
+      }catch(err){
+        alert("Error in updating customers!");
+      }
     }
     sendData();
-
   })
 </script>
 

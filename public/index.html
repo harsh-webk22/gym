@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Fitness 365</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -30,7 +29,7 @@
     <div class="navbar">
       <div class="n1">
         <div class="search">
-          <input type="text" placeholder="Search" />
+          <input type="text" id="myinput" onkeyup="searchfun()" placeholder="Search" />
         </div>
       </div>
 
@@ -38,74 +37,43 @@
         <img src="images/logo.jpeg" alt="" />
       </div>
     </div>
-
     <h1 class="xyz">Welcome</h1>
-
-
-
-    <div class="values">
-      <div class="values-box">
-        <h1>1230</h1>
-        <h3>Total Uers</h3>
-      </div>
-
-      <div class="values-box">
-        <h1>1230</h1>
-        <h3>Total Payment</h3>
-      </div>
-
-      <div class="values-box">
-        <h1>1230</h1>
-        <h3>Previous Month </h3>
-      </div>
-
-      <div class="values-box">
-        <h1>1230</h1>
-        <h3>Trainers</h3>
-      </div>
-
-
-
-
-
-
     </div>
 
     <div class="board">
-      <table width="100%" class="table">
+      <table width="100%" class="table" id="myTable">
         <thead>
           <tr>
-            <tr>
-              <td>
-                <h3>Name</h3>
-              </td>
-              <td>
-                <h3>Gender</h3>
-              </td>
-              <td>
-                <h3>Phone number </h3>
-              </td>
-              <td>
-                <h3>Age</h3>
-              </td>
-              <td>
-                <h3>Joinng Date </h3>
-              </td>
-              <td>
-                <h3>Expiry Date</h3>
-              </td>
-          </tr>
-        </thead>
+            <td>
+              <h3>Name</h3>
+            </td>
+            <td>
+              <h3>Phone Number</h3>
+            </td>
+            <td>
+              <h3>Age </h3>
+            </td>
+            <td>
+              <h3>Fees</h3>
+            </td>
+            <td>
+              <h3>DOB</h3>
+            </td>
+            
+            <td>
+              <h3>Gender</h3>
+            </td>
+            <td>
+              <h3>Expiry Date </h3>
+            </td>
+            <td>
+              <h3>joining Date</h3>
+            </td>
+           
 
-        <!-- <tbody class="tdata">
-          `
-            <td>
-              <h4>Male</h4>
-            </td>
-            <td>
-              <h4>20/02/2023</h4>
-            </td>
-          </tr> -->
+          </tr>
+
+        </thead>
 
         </tbody>
       </table>
