@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  background: #e5e7eb;
+  position: relative;
+  display: flex;
+}
+
+#menu {
+  background-color: #3000aa;
+  width: 20%;
+  height: 700px;
+  padding-right: 40px;
+}
+#menu .logo h2 {
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+}
+
+#menu .logo {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  color: #000;
+  padding-left: 10px;
+}
+
+#menu .logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 200px;
+  margin-right: 15px;
+}
+
+#menu .items {
+  margin-top: 40px;
+}
+
+#menu .items li {
+  list-style: none;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+#menu .items li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+#menu .items li:hover {
+  background: #4447ff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#menu .items li:nth-child(1) {
+  border-left: 5px solid white;
+}
+
+#interface .navbar {
+  display: flex;
+  margin-left: 0px;
+  margin-top: 0px;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  border-bottom: 3px solid blue;
+}
+
+#interface {
+  width: 80%;
+}
+
+#interface .navbar .search {
+  padding: 10px 14px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 20px;
+  width: 600px;
+}
+
+#interface .navbar .search input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #3000aa;
+}
+
+#interface .navbar .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 200px;
+  margin-right: 50px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(0, 0, 0);
+  opacity: 10;
+  font-weight: bolder;
+}
+
+.xyz {
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: 2500;
+  color: #3000aa;
+  margin-left: 40px;
+}
+
+.values{
+  padding-right: 10px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.values-box{
+  width: 275px;
+  padding:16px 20px;
+  border: 1px solid blue;
+  background-color: white;
+  margin-left: 4px;
+  justify-content: center;
+  }
+
+  .values .values-box h1{
+    font-size: 45px;
+    font-weight: bolder;
+    font-style: italic;
+   }
+
+   .values.values-box h3{
+    font-size: px;
+    font-weight: bold;}
+
+    .board{
+      width: 100%;
+      background-color: white;
+      margin: 30px 18px 0 18px;
+      overflow: auto;
+      border-radius: 4px ;
+      padding: 10px 5px 0 5px ;
+    }
+
+   .board tbody {
+    margin-top: 30px ;
+   }
+
+   td,th {padding: .5em 1em;}
+
+
+    tr{
+   border-bottom: 1px solid blue;
+   }
+
+   thead td{
+    font-size: 19px;
+    color: blue;
+    font-weight: 900;
+   }
+   
+   .container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: black;
+}
+.container form{
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+  background-color: #fff;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-top: 10px;
+  /* padding-right: 60px; */
+}
+.container form .form{
+  position: absolute;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+form.secActive .form.first{
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+.container form .fields{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form .fields .input-field{
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+.input-field label{
+  font-size: 12px;
+  font-weight: 800;
+  color: black;
+}
+.input-field input, select{
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+  color:black;
+}
+.input-field input[type="date"]:valid{
+  color: black;
+}
+
+.container{
+  margin-left: 10px;
+  padding-left: 30px;
+  margin-right: 10px;
+  padding-right: 30px;
+}
+
+.container form button, .nextBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: #4070f4;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}

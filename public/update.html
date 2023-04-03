@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <title>Document</title>
+
+</head>
+
+<body>
+  <section id="menu">
+    <div class="logo">
+      <img src="images/logo.jpeg" alt="" />
+      <h2>Fitness365</h2>
+    </div>
+
+    <div class="items">
+      <li><a href="index.html">Dashboard </a></li>
+      <li><a href="add.html">Add Members</a></li>
+      <li><a href="all.html">All Members </a></li>
+      <!-- <li><a href="#">Remove</a></li> -->
+      <li><a href="update.html">Update </a></li>
+      <li><a href="due.html">Due payment </a></li>
+
+    </div>
+  </section>
+
+  <section id="interface">
+    <div class="navbar">
+      <div class="n1">
+        <div class="search">
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+
+      <div class="profile">
+        <img src="images/logo.jpeg" alt="" />
+      </div>
+    </div>
+
+
+
+    <div class="container">
+
+      <form action="" method="POST" id="form">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">
+              <h1>Update data</h1>
+            </span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>
+                  <h2>Full Name</h2>
+                </label>
+                <input type="text" name="fullname" placeholder="Enter your name" required>
+              </div>
+
+              
+
+              <div class="input-field">
+                <label>
+                  <h2>Mobile Number</h2>
+                </label>
+                <input type="number" name="number" placeholder="Enter mobile number" required>
+              </div>
+
+             
+
+              <div class="input-field">
+                <label>
+                  <h2>Fees</h2>
+                </label>
+                <input type="number" name="fees" placeholder="Enter your fees" required>
+              </div>
+
+              <div class="input-field">
+                <label>
+                  <h2>Payment Date </h2>
+                </label>
+                <input type="date"  name="join" placeholder="Enter your Joining date " required>
+              </div>
+
+              <div class="input-field">
+                <label>
+                  <h2>Next expiry date </h2>
+                </label>
+                <input type="date"  name="expiry" placeholder="Enter your expiry date" required>
+              </div>
+
+              <div class="input-field">
+                <label>
+                  <h2>Total Number of Months</h2>
+                </label>
+                <input type="number" name="months" placeholder="Enter your Months " required>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <input type="submit" class="nextBtn" value="Update" name="save" > 
+
+        </div>
+        </form>
+
+  </section>
+
+</body>
+<script>
+  var form = document.getElementById('form')
+  form.addEventListener('submit',function(event){
+    event.preventDefault()
+    var number = event.target.number.value;
+    var expiry = new Date(event.target.expiry.value).toISOString().slice(0, 10);
+    var data = {number, expiry}
+    console.log(data)
+
+    var sendData = async ()=>{
+      var res = await fetch("/updateUser", {
+        method:"POST",
+        mode : "cors",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      alert("Data saved succcessfully")
+    }
+    sendData();
+
+  })
+</script>
+
+</html>
